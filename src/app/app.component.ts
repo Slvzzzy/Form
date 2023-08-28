@@ -8,7 +8,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class AppComponent implements OnInit{
   hide = true;
-  form! : FormGroup
+  form! : FormGroup;
+
   ngOnInit() {
     this.form = new FormGroup({
       login: new FormControl('', [
@@ -22,11 +23,27 @@ export class AppComponent implements OnInit{
     })
   }
 
-  protected readonly onsubmit = onsubmit;
 
   submit() {
     console.log('Form:', this.form)
-    const UserData={...this.form.value}
-    console.log('UserInfo:', UserData)
+    console.log('UserInfo:', this.form.getRawValue())
+
+  }
+  getErrorLoginMessage() {
+
+    if (this.form.get('login')?.hasError('required')) {
+      return 'Поле login пустое';
+    }
+    if (this.form.get('login')?.hasError('minLength')) {
+      return 'Логин слишком короткий';
+    }
+    if (this.form.get('login')?.hasError('maxLength')) {
+      return 'Логин слишком длинный';
+    }
+    return 'error'
+  }
+
+  getErrorPasswordMessage() {
+    return 'error'
   }
 }

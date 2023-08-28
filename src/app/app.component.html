@@ -3,11 +3,21 @@
     <mat-form-field class="login">
       <mat-label>Логин</mat-label>
       <input matInput type="text" formControlName="login">
-    </mat-form-field>
+      <pre>{{form.get('login')?.errors | json}}</pre>
+       <mat-error  *ngIf="form.invalid && form.touched" class="validation">
+        {{getErrorLoginMessage()}}
+       </mat-error>
+
+  </mat-form-field>
+
     <div class="example-container">
       <mat-form-field>
         <mat-label>Введите пароль</mat-label>
         <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+        <mat-error   *ngIf="form.get('login')?.invalid && form.get('login')?.touched" class="validation">
+          {{getErrorPasswordMessage()}}
+        </mat-error>
+
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
