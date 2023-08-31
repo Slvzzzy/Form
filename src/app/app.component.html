@@ -1,35 +1,3 @@
-<form [formGroup]="form" (ngSubmit)="submit()">
-  <div class="container-form">
-    <mat-form-field class="login">
-      <mat-label>Логин</mat-label>
-      <input matInput type="text" formControlName="login">
-      <pre>{{form.get('login')?.errors | json}}</pre>
-       <mat-error  *ngIf="form.invalid && form.touched" class="validation">
-        {{getErrorLoginMessage()}}
-       </mat-error>
-
-  </mat-form-field>
-
-    <div class="example-container">
-      <mat-form-field>
-        <mat-label>Введите пароль</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
-        <mat-error   *ngIf="form.get('login')?.invalid && form.get('login')?.touched" class="validation">
-          {{getErrorPasswordMessage()}}
-        </mat-error>
-
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-      </mat-form-field>
-    </div>
-    <section>
-      <div class="example-label"></div>
-      <div class="example-button-row">
-        <button class="btn" type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Войти</button>
-      </div>
-    </section>
-  </div>
-</form>
+<router-outlet></router-outlet>
 
 
