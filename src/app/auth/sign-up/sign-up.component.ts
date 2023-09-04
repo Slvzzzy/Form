@@ -13,7 +13,12 @@ export class SignUpComponent implements OnInit{
   registerForm! : FormGroup;
 
   ngOnInit() {
-    this.registerForm = new FormGroup({
+
+    // @ts-ignore
+      // @ts-ignore
+      // @ts-ignore
+      // @ts-ignore
+      this.registerForm = new FormGroup({
       login: new FormControl('', [
         Validators.required,
         Validators.minLength(3),
@@ -26,10 +31,32 @@ export class SignUpComponent implements OnInit{
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(30),
-        // MyValidators.confirmPassword
       ])
-    })
+
+    },
+          // @ts-ignore
+          this.ConfirmedValidator('password', 'passwordRepeat') )
   }
+    ConfirmedValidator(password: string, passwordRepeat: string) {
+        return (formGroup: any) => {
+            const control = formGroup.controls[password];
+            const matchingControl = formGroup.controls[passwordRepeat];
+            if (
+
+                matchingControl.errors &&
+                // @ts-ignore
+                !matchingControl.errors.confirmedValidator
+            ) {
+                return;
+            }
+            console.log(formGroup)
+            if (control.value !== matchingControl.value) {
+                matchingControl.setErrors({ confirmedValidator: true });
+            } else {
+                matchingControl.setErrors(null);
+            }
+        };
+    }
   submit() {
     console.log('Form:', this.registerForm)
     console.log('UserInfo:', this.registerForm.getRawValue())
@@ -45,9 +72,7 @@ export class SignUpComponent implements OnInit{
     if (this.registerForm.get(fieldName)?.hasError('maxlength')) {
       return `${fieldName} слишком длинный`;
     }
-    if (this.registerForm.get(fieldName)?.hasError('confirmPassword')) {
-      return `Пароли не совпадают`;
-    }
+
     return 'error'
   }
   getFormControl(controlName: string): FormControl {
