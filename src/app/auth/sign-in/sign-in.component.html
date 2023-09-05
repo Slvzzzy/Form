@@ -26,7 +26,7 @@
     <section>
       <div class="example-label"></div>
       <div class="example-button-row">
-        <button class="btn" type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Войти</button>
+        <button class="btn" type="submit" [routerLink]="['/main-page']" [disabled]="form.invalid" mat-raised-button color="primary">Войти</button>
         <button class="btn" type="button" [routerLink]="['/registration']" mat-raised-button color="primary">
           Регистрация
         </button>

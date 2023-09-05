@@ -56,4 +56,6 @@ section {
   justify-content: center;
   width: 120px;
 }
-
+.text-error-confirmPass {
+  margin-left: 18px;
+}

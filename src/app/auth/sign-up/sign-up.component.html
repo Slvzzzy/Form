@@ -25,22 +25,25 @@
       <mat-form-field>
         <mat-label>Повторите пароль</mat-label>
         <input matInput [type]="hide ? 'password' : 'text'" formControlName="passwordRepeat">
-        <mat-error   *ngIf="getFormControl('passwordRepeat').invalid && getFormControl('passwordRepeat').touched">
-
-            <small *ngIf="registerForm.hasError('mismatch')">Пароль не совпадает</small>
-
-        </mat-error>
-
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
+      <mat-error   *ngIf="registerForm.touched && registerForm.hasError('mismatch')
+      && !(getFormControl('passwordRepeat').hasError('required'))">
+        <small>Пароль не совпадает</small>
+      </mat-error>
+      <mat-error   *ngIf="getFormControl('passwordRepeat').invalid && getFormControl('passwordRepeat').touched
+      && getFormControl('passwordRepeat').hasError('required')">
+        <small class="text-error-confirmPass">Поле пустое</small>
+      </mat-error>
+
     </div>
 
     <section>
       <div class="example-label"></div>
       <div class="example-button-row">
-        <button class="btn" type="submit" [disabled]="registerForm.invalid" mat-raised-button color="primary">Создать</button>
+        <button class="btn" type="submit" [routerLink]="['/main-page']" [disabled]="registerForm.invalid" mat-raised-button color="primary">Создать</button>
       </div>
     </section>
     <section>

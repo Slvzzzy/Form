@@ -4,20 +4,18 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule,} from "@angular/forms";
 import {AuthModule} from "./auth/auth.module";
-
-
-
+import {MainPageModule} from "./main-page/main-page.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     AuthModule,
+    MainPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

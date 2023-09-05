@@ -35,7 +35,7 @@ export class SignUpComponent implements OnInit{
   getAuthErrorMessage(fieldName: string) {
     console.log('form', this.registerForm.get(fieldName))
     if (this.registerForm.get(fieldName)?.hasError('required')) {
-      return `Поле ${fieldName} пустое`;
+      return `Поле пустое`;
     }
     if (this.registerForm.get(fieldName)?.hasError('minlength')) {
       return `${fieldName} слишком короткий`;
