@@ -25,11 +25,10 @@
       <mat-form-field>
         <mat-label>Повторите пароль</mat-label>
         <input matInput [type]="hide ? 'password' : 'text'" formControlName="passwordRepeat">
-        <mat-error   *ngIf="getFormControl('passwordRepeat').invalid && getFormControl('passwordRepeat').touched" class="validation">
-              {{getAuthErrorMessage('passwordRepeat')}}
-          <div *ngIf="registerForm.get('passwordRepeat')?.hasError('notSame', 'password')">
-              <small>Пароли не совпадают</small>
-          </div>
+        <mat-error   *ngIf="getFormControl('passwordRepeat').invalid && getFormControl('passwordRepeat').touched">
+
+            <small *ngIf="registerForm.hasError('mismatch')">Пароль не совпадает</small>
+
         </mat-error>
 
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
@@ -42,6 +41,12 @@
       <div class="example-label"></div>
       <div class="example-button-row">
         <button class="btn" type="submit" [disabled]="registerForm.invalid" mat-raised-button color="primary">Создать</button>
+      </div>
+    </section>
+    <section>
+      <div class="example-label"></div>
+      <div class="example-button-row">
+        <button class="btn" type="button" [routerLink]="['/sign-in']" mat-raised-button color="primary">Вернуться</button>
       </div>
     </section>
 
