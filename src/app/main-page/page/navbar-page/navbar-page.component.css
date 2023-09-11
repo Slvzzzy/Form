@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+
+}
+html {
+  font-size: 14px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  font-size: 0.88rem;
+  background: azure;
+  user-select: none;
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  align-items: flex-start;
+  width: 200px;
+  margin: 0 2%;
+  gap: 1.8rem;
+
+}
+a{
+  display: flex;
+  color: #f2f2f2;
+}
+h1 {font-weight: 800;font-size: 1.3rem;}  h2 {font-size: 1.1rem;}  h3 {font-size: 1rem;}  h4 {font-size: 0.7rem;}
+h5 {font-size: 0.6rem;}
+aside {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 180px;
+  padding: 5px;
+  margin: 0 0;
+  border-radius: 25px;
+}
+mat-toolbar {
+  background: #5dcad8;
+  color: white;
+  height: 50px;
+}
+mat-sidenav {
+  margin: 16px;
+  width: 240px;
+  border-right: none;
+  background: linear-gradient(to bottom, #5dcad8 0%, #298bd1 100%);
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+}
+.content {
+  height: calc(100vh - 98px);
+  border-radius: 10px;
+  margin: 16px 16px 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: lightgray;
+  width: 900px;
+}
+mat-sidenav-container {
+  height: calc(100vh - 35px);
+}
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+}
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.mat-divider {
+   border-top-style: none;
+}
+.activemenu {
+  text-decoration: none;
+}
+.activemenu:hover {
+  color: #0c65a6;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #143861;
+}
+:host::ng-deep .mat-drawer-inner-container::-webkit-scrollbar {
+  background-color: blue;    /* цвет бегунка */
+  border-radius: 20px;       /* округлось бегунка */
+  border: 3px solid orange;  /* отступ вокруг бегунка */
+}
