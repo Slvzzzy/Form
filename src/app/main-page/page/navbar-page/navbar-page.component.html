@@ -1,78 +1,20 @@
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<mat-toolbar>
-</mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav mode="side" opened>
     <div class="container" >
       <aside class="scrollnavbar">
         <div class="top">
           <div class="sidebar"></div>
-          <div >
-            <h2>MENU</h2>
-            <div>
-              <a href="#" class="activemenu">
-                <mat-icon class="icons">dashboard</mat-icon>
-                <h3>Dashbord</h3>
-              </a>
-              <a href="#" class="activemenu">
-                <mat-icon class="icons"> message</mat-icon>
-                <h3>Message</h3>
-                <span class="message-count" ></span>
-              </a>
-              <a href="#" class="activemenu">
-                <mat-icon class="icons">date_range</mat-icon>
-                <h3>Calendar</h3>
+          <div *ngFor="let name of navBarDate">
+            <h2>{{name.title}}</h2>
+            <div *ngFor="let link of name.link">
+              <a href="#" routerLinkActive="active">
+              <mat-icon class="icons">{{link.icon}}</mat-icon>
+              <h3>{{link.label}}</h3>
               </a>
             </div>
-          </div>
-          <div>
-            <h2>RECRUITMENT</h2>
-            <div>
-              <a href="#" class="activemenu">
-                <mat-icon class="icons">work</mat-icon>
-                <h3>Jobs</h3>
-              </a>
-              <a href="#" class="activemenu">
-                <mat-icon class="icons">accessible_forward</mat-icon>
-                <h3>Candidates</h3>
-              </a><a href="#" class="activemenu">
-              <mat-icon class="icons">credit_card</mat-icon>
-              <h3>My Referals</h3>
-            </a><a href="#" class="activemenu">
-              <mat-icon> class="iconbar"timeline</mat-icon>
-              <h3>Career Site</h3>
-            </a>
-            </div>
-          </div>
-          <div>
-            <h2>ORGANIZATION</h2>
-            <div>
-              <a href="#" class="activemenu">
-                <mat-icon class="icons">people</mat-icon>
-                <h3>Employee</h3>
-              </a>
-              <a href="#" class="activemenu">
-                <mat-icon class="icons">view_list</mat-icon>
-                <h3>Structure</h3>
-              </a>
-              <a href="#" class="activemenu">
-                <mat-icon class="icons">report</mat-icon>
-                <h3>Report</h3>
-              </a>
-              <a href="#"  class="activemenu">
-                <mat-icon class="icons">settings</mat-icon>
-                <h3>Settings</h3>
-              </a>
-            </div>
-
           </div>
         </div>
       </aside>
     </div>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="content mat-elevation-z8">
-      Mainbord
-    </div>
-  </mat-sidenav-content>
 </mat-sidenav-container>

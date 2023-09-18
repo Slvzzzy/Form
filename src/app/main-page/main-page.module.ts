@@ -8,14 +8,20 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatButtonModule} from "@angular/material/button";
+import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { AccountComponent } from './page/account/account.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 const routes: Routes = [
-  {path: 'main-page', component: PageComponent}
+  {path: 'main-page', component: PageComponent},
 ]
 
 @NgModule({
   declarations: [
     PageComponent,
-    NavbarPageComponent
+    NavbarPageComponent,
+    DashboardComponent,
+    AccountComponent,
+
   ],
   imports: [
     CommonModule,
@@ -24,7 +30,8 @@ const routes: Routes = [
     MatToolbarModule,
     MatSidenavModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   exports: [
     PageComponent,

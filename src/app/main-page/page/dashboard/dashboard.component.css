@@ -1,0 +1,28 @@
+.content {
+  height: calc(100vh - 36px);
+  margin: -664px 0 16px 290px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  color: #a22929;
+  width: calc(130vh);
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #5dcad8 0%, #298bd1 100%);
+}
+.statistic {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  background: #ffffff;
+  width: 250px;
+  height: 150px;
+}
+.grafic {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  width: calc(120vh - 35px);
+  height: calc(60vh - 80px);
+}
+

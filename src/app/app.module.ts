@@ -16,7 +16,7 @@ import {MainPageModule} from "./main-page/main-page.module";
     BrowserAnimationsModule,
     FormsModule,
     AuthModule,
-    MainPageModule
+    MainPageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

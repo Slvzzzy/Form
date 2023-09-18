@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { navBarDate} from "./navbardata";
 
 @Component({
   selector: 'app-navbar-page',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class NavbarPageComponent {
 
+  protected readonly navBarDate = navBarDate;
+  protected readonly menubar = menubar;
 }

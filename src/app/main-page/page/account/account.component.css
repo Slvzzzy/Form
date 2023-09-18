@@ -1,0 +1,10 @@
+.adminbar {
+  margin: -663px 0 0 1205px;
+  width: 225px;
+  border-right: none;
+  background: linear-gradient(to bottom, #5dcad8 0%, #298bd1 100%);
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  height: calc(100vh - 64px);
+}
