@@ -7,7 +7,7 @@
           <div *ngFor="let name of navBarDate">
             <h2>{{name.title}}</h2>
             <div *ngFor="let link of name.link">
-              <a href="#" routerLinkActive="active">
+              <a [routerLink]="[link.label]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
               <mat-icon class="icons">{{link.icon}}</mat-icon>
               <h3>{{link.label}}</h3>
               </a>

@@ -7,7 +7,5 @@ import { navBarDate} from "./navbardata";
   styleUrls: ['./navbar-page.component.css']
 })
 export class NavbarPageComponent {
-
-  protected readonly navBarDate = navBarDate;
-  protected readonly menubar = menubar;
+  navBarDate = navBarDate;
 }

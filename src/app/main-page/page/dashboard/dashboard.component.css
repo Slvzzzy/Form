@@ -1,22 +1,23 @@
 .content {
   height: calc(100vh - 36px);
-  margin: -664px 0 16px 290px;
+  margin: 0 20px 0 0;
   display: flex;
+  align-content: flex-start;
   justify-content: space-around;
   flex-wrap: wrap;
   font-size: 2rem;
-  color: #a22929;
-  width: calc(130vh);
+  width: calc(129vh + 10px);
   border-radius: 10px;
   background: linear-gradient(to bottom, #5dcad8 0%, #298bd1 100%);
 }
 .statistic {
   display: flex;
   align-items: center;
-  margin-top: 10px;
-  background: #ffffff;
-  width: 250px;
-  height: 150px;
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  font-family: Arial, serif;
+  color: #212121;
 }
 .grafic {
   display: flex;

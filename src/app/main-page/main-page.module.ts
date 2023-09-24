@@ -11,8 +11,17 @@ import {MatButtonModule} from "@angular/material/button";
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { AccountComponent } from './page/account/account.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { BrowserModule } from '@angular/platform-browser';
+import {DashboardCircle} from "./page/dashboard/dashboard-circle/dashboard-circle";
+import {LineChartModule, PieChartModule} from "@swimlane/ngx-charts";
+import {DashboardGrafic} from "./page/dashboard/dashboard-grafic/dashboard-grafic";
+import {Calendar} from "./page/navbar-page/Calendar/Calendar";
+import {Message} from "./page/navbar-page/Message/Message";
+
 const routes: Routes = [
-  {path: 'main-page', component: PageComponent},
+  {path: 'dashboard', component: PageComponent},
+  {path: 'dashboard/Calendar', component: Calendar},
+  {path: 'dashboard/Message', component: Message},
 ]
 
 @NgModule({
@@ -21,7 +30,10 @@ const routes: Routes = [
     NavbarPageComponent,
     DashboardComponent,
     AccountComponent,
-
+    DashboardCircle,
+    DashboardGrafic,
+    Calendar,
+    Message
   ],
   imports: [
     CommonModule,
@@ -31,12 +43,16 @@ const routes: Routes = [
     MatSidenavModule,
     MatDividerModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BrowserModule,
+    PieChartModule,
+    LineChartModule,
+
   ],
   exports: [
     PageComponent,
     RouterModule,
-    NavbarPageComponent
+    NavbarPageComponent,
   ]
 })
 export class MainPageModule {

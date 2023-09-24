@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule,} from "@angular/forms";
 import {AuthModule} from "./auth/auth.module";
 import {MainPageModule} from "./main-page/main-page.module";
-
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +17,7 @@ import {MainPageModule} from "./main-page/main-page.module";
     FormsModule,
     AuthModule,
     MainPageModule,
+    NgxChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

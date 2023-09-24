@@ -1,4 +1,4 @@
-export var navBarDate = [
+export const navBarDate = [
   { title: "Menu", link: [{
       label: "Dashbord",
       icon: "dashboard",
@@ -59,4 +59,4 @@ export var navBarDate = [
         label: "Rules",
         icon: "check_circle",
       }]}
-];
+]

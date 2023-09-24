@@ -1,10 +1,19 @@
 .adminbar {
-  margin: -663px 0 0 1205px;
-  width: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 16px 0 0;
+  width: 230px;
   border-right: none;
   background: linear-gradient(to bottom, #5dcad8 0%, #298bd1 100%);
   color: white;
   border-radius: 10px;
   padding: 16px;
   height: calc(100vh - 64px);
+}
+.avatar {
+  border: 1px solid #03BFCB;
+  border-radius: 50%;
+  padding: 7px;
 }

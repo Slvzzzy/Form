@@ -51,10 +51,16 @@ mat-sidenav {
 
 }
 mat-sidenav-container {
+  width: 280px;
   height: calc(100vh);
 }
+mat-drawer-content {
+
+
+}
 .mat-drawer-container {
-  background: rgba(0, 0, 0, 0);
+
+
 }
 .mat-divider {
    border-top-style: none;
@@ -62,12 +68,6 @@ mat-sidenav-container {
 .mat-drawer.mat-drawer-side {
   direction: rtl;
 }
-/*.activemenu {*/
-/*  text-decoration: none;*/
-/*}*/
-/*.activemenu:hover {*/
-/*  color: #0c65a6;*/
-/*}*/
 
 :host::ng-deep .mat-drawer-inner-container::-webkit-scrollbar {
   width: 5px;
