@@ -1,4 +1,4 @@
-export var multi = [
+export const multi = [
   {
     "name": "Germany",
     "series": [

@@ -1,0 +1,5 @@
+:host::ng-deep .advanced-pie-legend .legend-items-container .legend-items {
+  display: flex;
+  height: 80px;
+  align-items: center;
+}

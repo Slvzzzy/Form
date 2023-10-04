@@ -1,8 +1,8 @@
 import { Component,} from '@angular/core';
 
-import { single } from './data-circle';
+import { single } from './countries-data-circle';
 import {Color} from "@swimlane/ngx-charts";
-import {ScaleType} from "@swimlane/ngx-charts/lib/common/types/scale-type.enum";
+
 
 @Component({
   selector: 'app-dashboard-circle',
@@ -11,7 +11,7 @@ import {ScaleType} from "@swimlane/ngx-charts/lib/common/types/scale-type.enum";
 })
 export class DashboardCircle {
   single: any[] | undefined;
-  view: [number, number] = [850, 700];
+  view: [number, number] = [850, 250];
 
   // options
   gradient: boolean = true;

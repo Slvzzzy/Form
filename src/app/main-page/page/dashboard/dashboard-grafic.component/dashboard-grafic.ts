@@ -1,5 +1,5 @@
 import { Component, } from '@angular/core';
-import { multi } from './data';
+import { multi } from './cointries-data-grafic';
 
 @Component({
   selector: 'app-dashboard-grafic',
@@ -7,7 +7,7 @@ import { multi } from './data';
 })
 export class DashboardGrafic {
   multi: any[] | undefined;
-  view: [number, number] = [700, 300];
+  view: [number, number] = [850, 400];
 
   // options
   legend: boolean = true;
@@ -22,7 +22,7 @@ export class DashboardGrafic {
   timeline: boolean = true;
 // @ts-ignore
   colorScheme: string = {
-    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
+    domain: ['#1bf009', '#d13007', '#e35a2d', '#0e56cb', '#a8385d', '#aae3f5']
   };
 
   constructor() {

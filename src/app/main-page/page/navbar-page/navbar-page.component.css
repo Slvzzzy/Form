@@ -39,6 +39,9 @@ mat-toolbar {
   color: white;
   height: 50px;
 }
+.active {
+  color: #00548d;
+}
 
 mat-sidenav {
   margin: 16px;

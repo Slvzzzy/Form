@@ -1,0 +1,10 @@
+<div class="container-page">
+  <app-navbar-page></app-navbar-page>
+  <div class="contentCalendar">
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar [(selected)]="selected"></mat-calendar>
+    </mat-card>
+    <p>Selected date: {{selected | date:'short'}}</p>
+  </div>
+  <app-account></app-account>
+</div>

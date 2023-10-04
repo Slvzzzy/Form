@@ -1,6 +1,6 @@
 export const navBarDate = [
   { title: "Menu", link: [{
-      label: "Dashbord",
+      label: "Dashboard",
       icon: "dashboard",
       },
       {
