@@ -26,7 +26,12 @@
     <section>
       <div class="example-label"></div>
       <div class="example-button-row">
-        <button class="btn" type="submit" [routerLink]="['/dashboard']" [disabled]="form.invalid" mat-raised-button color="primary">Войти</button>
+        <button class="btn" type="submit"
+                (click)="authService.SignIn(login.value, password.value)"
+                [routerLink]="['/dashboard']" [disabled]="form.invalid"
+                mat-raised-button color="primary">
+          Войти
+        </button>
         <button class="btn" type="button" [routerLink]="['/registration']" mat-raised-button color="primary">
           Регистрация
         </button>

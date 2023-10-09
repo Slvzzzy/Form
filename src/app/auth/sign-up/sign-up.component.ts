@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {confirmedValidator} from "./MyValidators";
-
+import { AuthService } from "../../shared/services/auth.service";
 
 @Component({
   selector: 'app-sign-up',
@@ -11,7 +11,9 @@ import {confirmedValidator} from "./MyValidators";
 export class SignUpComponent implements OnInit{
   hide = true;
   registerForm! : FormGroup;
-
+  constructor(
+    public authService: AuthService
+  ) { }
   ngOnInit() {
       this.registerForm = new FormGroup({
           login: new FormControl('', [
@@ -43,6 +45,7 @@ export class SignUpComponent implements OnInit{
     if (this.registerForm.get(fieldName)?.hasError('maxlength')) {
       return `${fieldName} слишком длинный`;
     }
+    // @ts-ignore
     return
   }
   getFormControl(controlName: string): FormControl {

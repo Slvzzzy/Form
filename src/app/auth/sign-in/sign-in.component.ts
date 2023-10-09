@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-
+import { AuthService } from "../../shared/services/auth.service";
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -9,7 +9,9 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class SignInComponent implements OnInit{
   hide = true;
   form! : FormGroup;
-
+  constructor(
+    public authService: AuthService
+  ) { }
   ngOnInit() {
     this.form = new FormGroup({
       login: new FormControl('', [

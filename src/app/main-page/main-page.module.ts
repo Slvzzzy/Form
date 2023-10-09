@@ -24,8 +24,10 @@ import {MyReferalsComponent} from "./page/navbar-page/myReferals.component/myRef
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatCardModule} from "@angular/material/card";
 import {MatNativeDateModule} from '@angular/material/core';
+// route guard
+import {AuthGuard} from "../shared/guard/auth.guard";
 const routes: Routes = [
-  {path: 'dashboard', component: PageComponent},
+  {path: 'dashboard', component: PageComponent, canActivate: [AuthGuard]},
   {path: 'calendar', component: CalendarComponent},
   {path: 'message', component: MessageComponent},
   {path: 'jobs', component: JobsComponent},

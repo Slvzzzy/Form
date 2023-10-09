@@ -6,6 +6,11 @@ import {FormsModule,} from "@angular/forms";
 import {AuthModule} from "./auth/auth.module";
 import {MainPageModule} from "./main-page/main-page.module";
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+
+// Firebase main module
+import { AngularFireModule } from "@angular/fire/compat";
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +23,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     AuthModule,
     MainPageModule,
     NgxChartsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'Forma'),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

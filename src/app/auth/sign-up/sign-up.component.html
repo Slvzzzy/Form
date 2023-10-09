@@ -43,7 +43,13 @@
     <section>
       <div class="example-label"></div>
       <div class="example-button-row">
-        <button class="btn" type="submit" [routerLink]="['/dashboard']" [disabled]="registerForm.invalid" mat-raised-button color="primary">Создать</button>
+        <button class="btn" type="submit"
+                (click)="authService.SignUp(login.value, password.value)"
+                [routerLink]="['/dashboard']"
+                [disabled]="registerForm.invalid"
+                mat-raised-button color="primary">
+          Создать
+        </button>
       </div>
     </section>
     <section>
@@ -52,7 +58,6 @@
         <button class="btn" type="button" [routerLink]="['/sign-in']" mat-raised-button color="primary">Вернуться</button>
       </div>
     </section>
-
   </div>
 </form>
 
